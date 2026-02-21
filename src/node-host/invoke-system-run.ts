@@ -1,8 +1,7 @@
 import crypto from "node:crypto";
-import type { GatewayClient } from "../gateway/client.js";
-import type { ExecHostRequest, ExecHostResponse, ExecHostRunResult } from "../infra/exec-host.js";
 import { resolveAgentConfig } from "../agents/agent-scope.js";
 import { loadConfig } from "../config/config.js";
+import type { GatewayClient } from "../gateway/client.js";
 import {
   addAllowlistEntry,
   analyzeArgvCommand,
@@ -17,6 +16,7 @@ import {
   type ExecCommandSegment,
   type ExecSecurity,
 } from "../infra/exec-approvals.js";
+import type { ExecHostRequest, ExecHostResponse, ExecHostRunResult } from "../infra/exec-host.js";
 import { getTrustedSafeBinDirs } from "../infra/exec-safe-bin-trust.js";
 import { resolveSystemRunCommand } from "../infra/system-run-command.js";
 

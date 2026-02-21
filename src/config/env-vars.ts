@@ -1,5 +1,5 @@
-import type { OpenClawConfig } from "./types.js";
 import { isDangerousHostEnvVarName, normalizeEnvVarKey } from "../infra/host-env-security.js";
+import type { OpenClawConfig } from "./types.js";
 
 function collectConfigEnvVarsByTarget(cfg?: OpenClawConfig): Record<string, string> {
   const envConfig = cfg?.env;
